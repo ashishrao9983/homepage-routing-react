@@ -4,7 +4,7 @@ import './index.css'
 
 import App from './App.jsx'
 
-import {createBrowserRouter, createRoutesFromElements, Route, RouterProvider} from 'react-router-dom'
+import {createHashRouter, createRoutesFromElements, Route, RouterProvider} from 'react-router-dom'
 import Layout from './Layout.jsx'
 import Home from './components/Home/Home.jsx'
 import Contact from './components/Contact/Contact.jsx'
@@ -31,7 +31,7 @@ import Github ,{githubInfoLoader} from './components/Github/Github.jsx'
 // }
 // ])
 
-const router =createBrowserRouter(
+const router =createHashRouter(
   createRoutesFromElements(
     <Route path='/' element={<Layout/>}>
     <Route path='/' element={<Home />}/>
